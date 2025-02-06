@@ -2,7 +2,7 @@
 #################################################
 #script Installation of sd web ui
 # 1. Use docker image: pytorch/pytorch:2.1.0-cuda12.1-cudnn8-runtime
-# 2. Open terminal and download the run_script.sh file: wget https://raw.githubusercontent.com/jahangir091/stable-diffusion-web-ui-custom/master/run_script.sh
+# 2. Open terminal and download the run_script.sh file: wget https://raw.githubusercontent.com/dibyabitmorpher/stable-diffusion-web-ui-custom/master/run_script.sh
 # 3. chmod +x run_script.sh
 # 4. just run ./runscript.sh install
 #    or ./runscript.sh start
@@ -68,8 +68,8 @@ prepare_installation(){
   rm -rf stable-diffusion-webui
 
   printf "\n%s\n" "${delemeter8}"
-  wget -q https://raw.githubusercontent.com/jahangir091/stable-diffusion-web-ui-custom/master/webui.sh
-  wget -q https://raw.githubusercontent.com/jahangir091/stable-diffusion-web-ui-custom/master/webui-user.sh
+  wget -q https://raw.githubusercontent.com/dibyabitmorpher/stable-diffusion-web-ui-custom/master/webui.sh
+  wget -q https://raw.githubusercontent.com/dibyabitmorpher/stable-diffusion-web-ui-custom/master/webui-user.sh
 
   printf "\n%s\n" "${delemeter9}"
   chmod +x webui.sh
@@ -78,7 +78,7 @@ prepare_installation(){
   printf "\n%s\n" "${delemeter11}"
   rm /etc/nginx/sites-available/nginx_settings.conf
   rm /etc/nginx/sites-enabled/nginx_settings.conf
-  wget https://raw.githubusercontent.com/jahangir091/stable-diffusion-web-ui-custom/master/nginx_settings.conf -P /etc/nginx/sites-available/
+  wget https://raw.githubusercontent.com/dibyabitmorpher/stable-diffusion-web-ui-custom/master/nginx_settings.conf -P /etc/nginx/sites-available/
   ln -s /etc/nginx/sites-available/nginx_settings.conf /etc/nginx/sites-enabled/
 
   printf "\n%s\n" "${delemeter12}"
